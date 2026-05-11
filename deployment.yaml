@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: shellscape-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: shellscape
+
+  template:
+    metadata:
+      labels:
+        app: shellscape
+
+    spec:
+      containers:
+      - name: shellscape
+
+        image: nikhilbloria/shellscape
+
+        ports:
+        - containerPort: 80
