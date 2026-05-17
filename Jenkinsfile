@@ -33,7 +33,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 echo 'Starting new container...'
-                sh 'docker run -d -p 8082:80 --name shellscape-container shellscape:latest'
+                sh 'docker run -d -p 80:80 --name shellscape-container shellscape:latest'
             }
         }
     }
