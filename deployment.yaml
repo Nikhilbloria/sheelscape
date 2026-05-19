@@ -20,7 +20,7 @@ spec:
       containers:
       - name: shellscape
 
-        image: nikhilbloria/shellscape
+        image: nikhilbloria/shellscape:monitoring
 
         ports:
         - containerPort: 80

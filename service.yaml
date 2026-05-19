@@ -3,14 +3,18 @@ kind: Service
 
 metadata:
   name: shellscape-service
+  labels:
+    app: shellscape
 
 spec:
-  type: LoadBalancer
+  type: NodePort
 
   selector:
     app: shellscape
 
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 31084
